@@ -8,7 +8,7 @@ namespace MonteCarlo
 {
     class PiBaby
     {
-        Random rnd = new Random();
+        
 
         public double Hipotanus()
         {
@@ -16,10 +16,12 @@ namespace MonteCarlo
 
             for (int i = 0; i < coord.Length; i++)
             {
+                Random rnd = new Random();
                 coord[i] = rnd.NextDouble();
             }
 
-            double hipot = 
+            double hipot = (Math.Sqrt(Math.Pow(coord[0], 2) + Math.Pow(coord[1], 2)));
+            return hipot;
         }
     }
 }

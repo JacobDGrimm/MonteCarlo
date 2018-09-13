@@ -17,7 +17,7 @@ namespace MonteCarlo
             for (int i = 0; i < arr.Length; i++)
             {
                 var PB = new PiBaby();
-                arr[i] = PB.Hipotanus;
+                arr[i] = PB.Hipotanus();
                 if (arr[i] <= 1.0)
                 {
                     inCircle++;
@@ -25,7 +25,7 @@ namespace MonteCarlo
             }
             double piAproximation = (inCircle / arr.Length) * 4.0;
             Console.WriteLine($"The number of values inside the circle were {inCircle},\n" +
-                $"The number calculated to pi for you is {}\n" +
+                $"The number calculated to pi for you is {piAproximation}\n" +
                 $"The difference between real pi and your pi is: {Math.Abs(Math.PI - piAproximation)}");
         }
     }
